@@ -1,0 +1,695 @@
+@import url("https://fonts.googleapis.com/css2?family=Croissant+One&family=Roboto:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marhey:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+    --background_color: rgb(50, 50, 50);
+    --second_background-color: #3b98f5;
+    --third_background-color: #d81fd8b7;
+    --text_color: #1b0a2e;
+    --accent_color: #ff6347;
+    --second_text_color: white;
+    --blah: rgb(26, 26, 26);
+}
+
+::selection {
+    background-color: rgb(0, 128, 81);
+    color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    transition-duration: 0.3s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.head {
+    background-color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.552), rgba(0, 0, 0, 0.558)), url(secon\ dcooking\ image.jpg);
+    background-size: contain;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    height: 682px;
+    overflow-x: hidden;
+}
+
+.active {
+    color: white !important;
+    background-color: var(--third_background-color) !important;
+}
+
+.navbar {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+.top-header {
+    width: 100%;
+    height: 100px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto auto auto;
+    margin-right:15%;
+}
+
+.navbar ul li {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.navbar ul a {
+    text-align: center;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 15px 40px;
+    color: var(--second_text_color);
+    background-color: inherit;
+    font-family: "Mukta", sans-serif;
+    word-spacing: 4px;
+    transition-duration: 0.5s;
+}
+
+.navbar ul a:hover {
+    background-color: rgba(32, 32, 32, 0.232);
+}
+
+
+.search_input {
+    border: 2px solid white;
+    width: 5px;
+    height: 28px;
+    border-radius: 30px;
+    font-size: 17px;
+    margin-right: 41%;
+    padding: 5px 0px 5px 20px;
+    text-transform: capitalize;
+    font-family: "Roboto", sans-serif;
+    background-image: url(search_icon.png);
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: 98% 50%;
+    background-color: transparent;
+    color: white;
+    transition: ease-in-out;
+    transition-duration: 1s !important;
+    transition-delay: 0.5s;
+}
+
+.search_input::placeholder {
+    color: white;
+}
+
+.search_input:focus::placeholder {
+    color: white;
+    transition-duration: 0.4s;
+}
+
+.navbar .submit {
+    font-size:18px;
+    background-color:rgba(255, 255, 255, 0.24);
+    border:2px solid white;
+    padding:10px 5px;
+    margin-right:80px;
+    color:white;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    border-radius:5px;
+    margin-top:10px;
+}
+
+.navbar .submit:hover {
+    background-color:rgba(255, 255, 255, 0.392);
+}
+
+.search_input:focus {
+    outline: none;
+}
+
+.custom-tooltip {
+    position: relative;
+}
+
+.custom-tooltip::before {
+    content: attr(data-title);
+    background: #000000;
+    color: #fff;
+    padding: 4px 8px;
+    position: absolute;
+    font-size: 15px;
+    z-index: 1;
+    border-radius: 4px;
+    top: 88%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+    text-transform: capitalize;
+    font-family: 'Dosis', sans-serif;
+    border-radius: 20px;
+}
+
+.custom-tooltip:hover::before {
+    transition-delay: 1s;
+    opacity: 1;
+}
+
+.custom-left-tooltip::before {
+    left: -220%;
+    top: 98%;
+}
+
+.main-head {
+    width: 100%;
+    height: fit-content;
+    margin: 0;
+}
+
+#theme_changer_button {
+    animation: growAndShrink 0.8s ease-in-out 2;
+}
+
+@keyframes growAndShrink {
+
+    0%,
+    100% {
+        transform: scale(1.3);
+    }
+
+    50% {
+        transform: scale(2.3);
+    }
+}
+
+.auto-type {
+    width: 100%;
+    display: block;
+    text-align: center;
+    font-size: 54px;
+    font-family: 'Edu TAS Beginner', cursive;
+    color: white;
+}
+
+.auto-desc {
+    animation: slowlyvisible 1s ease-in-out;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    height: fit-content;
+    background-color: rgba(0, 0, 0, 0.116);
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+}
+
+@keyframes slowlyvisible {
+    0% {
+        opacity: 0;
+        margin-top: -20px;
+    }
+
+    50% {
+        opacity: 0.5;
+        margin-top: -10px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-top: 0px;
+    }
+}
+
+.st {
+    color: white;
+    font-size: 18px;
+    margin: 15px 30px;
+    font-family: cursive;
+    text-transform: capitalize;
+}
+
+.emoji {
+    font-size: 34px;
+}
+
+.auto-button-p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+}
+
+.auto-button {
+    width: fit-content;
+    height: fit-content;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.053);
+    border: 2px solid white;
+    display: flex;
+    padding: 20px 30px;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 23px;
+    margin-top: 20px;
+    text-transform: capitalize;
+}
+
+.auto-button:hover {
+    background-color: rgba(255, 255, 255, 0.253);
+}
+
+.auto-button:hover .down-arrow {
+    animation: rotateAndgrow 1s ease-in-out infinite;
+}
+
+@keyframes rotateAndgrow {
+    0% {
+        transform: scale(1);
+    }
+
+    20% {
+        transform: scale(1.3);
+    }
+
+    40% {
+        transform: scale(1.5);
+    }
+
+    60% {
+        transform: scale(1.3);
+    }
+
+    80% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.recipe-selection-area {
+    background-color: #d81fd8;
+    height: fit-content;
+    color: white;
+    width: 100%;
+    transition: height 0.8s ease-out;
+}
+
+.rsa-head {
+    text-transform: capitalize;
+    padding-top: 2%;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Marhey', sans-serif;
+}
+
+.recipe-type-choose {
+    text-align: center;
+    margin-top: 3%;
+}
+
+.rtc-head {
+    font-size: 25px;
+    font-family: 'Dosis', sans-serif;
+}
+
+.rtc-radio-button {
+    width: 70%;
+    margin-left: 15%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.rtc-radio-button button {
+    width: fit-content;
+    height: fit-content;
+    font-size: 25px;
+    font-family: sans-serif;
+    cursor: pointer;
+    text-transform: capitalize;
+    padding: 20px 20px;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.253);
+    border: 2px solid white;
+}
+
+.rtc-radio-button button:hover {
+    background-color: rgba(255, 255, 255, 0.453);
+}
+
+.empty-div {
+    width: 100%;
+    height: 60px;
+}
+
+.rtc-content label {
+    text-transform: capitalize;
+}
+
+.load {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rtc-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rtc-content label {
+    font-size: 21px;
+    margin-right: 25px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.rtc-content select {
+    width: 200px;
+    height: fit-content;
+    font-size: 20px;
+    padding: 5px 5px 5px 10px;
+    border: 2px solid white;
+    border-radius: 20px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.289);
+    color: black;
+    cursor: pointer;
+    text-align: left;
+    text-transform: capitalize;
+    font-family: cursive;
+}
+
+.select-option:hover {
+    background-color: red;
+}
+
+.rtc-content select:hover {
+    background-color: rgba(255, 255, 255, 0.789);
+}
+
+.rtc-content select:focus {
+    background-color: rgba(255, 255, 255, 0.789);
+}
+
+.loader {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 15px solid rgba(255, 255, 255, 0.597);
+    border-top: 15px solid red;
+    animation: spin 1s infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fadeOut {
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes fadeIn {
+    50% {
+        opacity: 0.5;
+    }
+
+    100% {
+        opacity: 1;
+        display: block;
+    }
+}
+
+.rtc-content .guide {
+    font-size: 25px;
+    font-family: cursive;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.rtc-Fcontent {
+    font-size: 20px;
+    width: 100%;
+    height: fit-content;
+    color: white;
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 3%;
+}
+
+.rfc-head {
+    margin-top: 10px;
+    font-size: 25px;
+    text-transform: capitalize;
+
+}
+
+.rtc-finalR {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    width: 60%;
+    margin-left: 28%;
+    height: fit-content;
+    grid-row-gap: 30px;
+}
+
+.F-recipe {
+    text-transform: capitalize;
+    font-size: 18px;
+    cursor: pointer;
+    display: block;
+    margin-left: 20px;
+    width: fit-content;
+    transition-duration: 0.4s;
+    margin-right: auto;
+}
+
+.rtc-finalR:has(.F-recipe:hover) .F-recipe:not(:hover) {
+    color: rgba(255, 255, 255, 0.439);
+    transition-duration: 0.4s;
+}
+
+.F-recipe:hover {
+    text-decoration: 1px solid underline;
+    transition-duration: 0.4s;
+}
+
+.recipe-show {
+    width: 100%;
+    background-color:rgb(206, 206, 206);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+}
+
+.rs-head {
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.272);
+    font-weight: bold;
+    text-transform: capitalize;
+    padding-top: 100px;
+    font-family: cursive;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.recipe-content {
+    margin:30px;
+}
+
+.recipe-content .ing {
+    text-align: center;
+    color: black;
+}
+
+.recipe-content .ing .ing-head,
+.recipe-content .instructions .ing-head {
+    font-size: 45px;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-family: 'Noto Serif', serif;
+    color: white;
+    text-align: center;
+    margin: 20px 20px;
+}
+
+.recipe-content .ing .ing-table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table tr,
+td,
+th {
+    text-align: left;
+    border: 1px solid black;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+td,
+th {
+    font-size: 18px;
+    padding: 20px;
+    font-weight: bolder;
+    font-family: sans-serif;
+    color: white;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.447);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.447);
+}
+
+tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.211);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.211);
+    color: #000000;
+}
+
+.recipe-content .instruction-head {
+    font-family: 'Raleway', sans-serif;
+    text-transform: capitalize;
+    font-size:23px;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.816);
+}
+
+.instructions li::marker {
+    font-size:23px;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.816);
+    font-family: cursive;
+    font-weight: bold;
+}
+
+.recipe-content .instructions .ins-content-p {
+    margin-top:10px;
+    font-size:18px;
+    font-family: 'Quicksand', sans-serif;
+    text-transform: capitalize;
+}
+
+.recipe-content .instructions li {
+    margin-bottom:20px;
+}
+
+.recipe-content .instructions {
+    width:70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.feedback {
+    width:100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: center;
+    background-image:url(feedback.jpeg);
+    height:fit-content;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.feedback .feedback-head {
+    text-align:center;
+    font-size:72px;
+    text-shadow: 0px 0px 30px black;
+    font-family: 'Grape Nuts', cursive;
+    text-transform: uppercase;
+    padding-top:30px;
+    color:white;
+}
+
+.feedback form {
+    width: 700px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    justify-content: space-between;
+    margin-bottom:90px;
+}
+
+.feedback form label,
+.feedback form input  {
+    font-family: sans-serif;
+    text-transform: capitalize;
+    font-size:17px;
+    outline: none;
+    margin-bottom:30px;
+    color:white;
+    padding:2px 2px 2px 20px;
+    font-weight: bold;
+}
+.feedback form input::placeholder,
+.feedback form textarea::placeholder{
+    color:white;
+}
+
+.feedback form input {
+    width:400px;
+    height: 50px;
+    background: transparent;
+    border:2px solid white;
+}
+
+.feedback form textarea {
+    margin-left:20px;
+    padding:2px 2px 2px 20px;
+    background: transparent;
+    border:2px solid white;
+    color:white;
+}

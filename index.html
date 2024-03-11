@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+    <link rel="stylesheet" href="src/light_theme.css" type="text/css" id="light_theme">
+    <title>Nalvo's kitchen</title>
+</head>
+
+<body onload="navbar_animation()">
+    <div class="head" id="home">
+        <form action="">
+            <div class="top-header" id="top-header">
+                <div class="navbar" id="navbar">
+                    <ul>
+                        <li>
+                            <a href="#main" class="active custom-tooltip" id="js_animation_active"
+                                data-title="Home page ⬆️">
+                                home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#recipe-selection-area" id="js_animation_a" class="custom-tooltip"
+                                data-title="Go to recipe section⬆️">
+                                Recipes
+                            </a>
+                        </li>
+                    </ul>
+
+                    <input type="text" placeholder="Suggest Recipes" class="search_input custom-tooltip"
+                        id="search_input" data-title="Suggest More recipes">
+
+                    <button type="submit" class="submit" onclick="handleSubmit(event)">Submit</button>
+        </form>
+    </div>
+    </div>
+
+    <div class="main" id="main">
+        <div class="main-head">
+            <div class="picture-head">
+                <span class="auto-type"></span>
+                <br>
+                <div id="auto-type-p"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="recipe-selection-area" id="recipe-selection-area">
+        <p class="rsa-head">
+            Select The available recipes according to your desire
+        </p>
+        <div class="recipe-type-choose">
+            <p class="rtc-head">
+                Select the type of the food and further types that you want recipe of :
+            </p>
+            <div class="rtc-radio-button">
+                <button id="veg" class="veg" onclick="rtc_foodType('veg')">
+                    Vegan Food
+                </button>
+                <button id="non-veg" class="non-veg" onclick="rtc_foodType('nonveg')">
+                    Non-Veg Food
+                </button>
+            </div>
+        </div>
+
+        <div class="rtc-content" id="rtc-content">
+            <p class="guide">further content will be visible once you choose one of the options above!</p>
+        </div>
+
+        <div class="rtc-Fcontent" id="rtc-Fcontent">
+
+        </div>
+
+        <div class="empty-div"></div>
+
+        <div class="recipe-show" id="recipe-show">
+            <p class="rs-head">the recipe will be shown here once you select the options above</p>
+        </div>
+
+    </div>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="src/index.js"></script>
+</body>
+
+</html>
