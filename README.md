@@ -4,7 +4,7 @@ Welcome to the Recipe Project! This project aims to provide users with a collect
 
 ## Overview
 
-The Recipe Project is a simple web application featuring a responsive design that allows users to browse through a variety of food options and discover recipes based on their preferences. Whether you're a seasoned chef or a beginner in the kitchen, you'll find something tasty to try.
+The Recipe Project is a simple web application that allows users to browse through a variety of food options and discover recipes based on their preferences. Whether you're a seasoned chef or a beginner in the kitchen, you'll find something tasty to try.
 
 ## Features
 
